@@ -11,7 +11,7 @@ RUN \
     apt-get install -y software-properties-common
 
 #Fix: debconf: unable to initialize frontend: Dialog
-RUN apt-get install dialog
+#RUN apt-get install dialog
 #RUN dpkg-reconfigure debconf -f noninteractive -p high
 
 #FIX: gpg: requesting key EEA14886 from hkp server keyserver.ubuntu.com
