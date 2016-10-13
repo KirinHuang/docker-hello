@@ -1,7 +1,5 @@
 FROM ubuntu:trusty
 MAINTAINER kirnhuang@126.com
 
-ADD ./assets/run.sh /
-
-CMD ["/bin/echo", "hello, docker!"]
+COPY ./assets/aliyun_ubuntu_14.04.list /etc/apt/sources.list
 
