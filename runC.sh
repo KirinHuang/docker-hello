@@ -1,1 +1,1 @@
-docker run -d kirinhuang/hello
+docker run -it kirinhuang/hello /bin/bash
