@@ -1,10 +1,10 @@
 build:
-	docker build -t kirinhuang/yarn . 
+	docker build -t kirinhuang/nodejs . 
 
 run:
-	docker run --name yarn -it kirinhuang/yarn /bin/bash
+	docker run --name nodejs -it kirinhuang/nodejs /bin/bash
 
 runC:
-	docker attach yarn
+	docker attach nodejs
 cleanC:
 	docker ps -a | awk 'NR>1 {printf "%s ", $$1}' | xargs docker rm 
