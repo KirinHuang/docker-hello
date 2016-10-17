@@ -2,7 +2,7 @@ build:
 	docker build -t kirinhuang/tomcat . 
 
 run:
-	docker run --name tomcat -it kirinhuang/tomcat /bin/bash
+	docker run -d --name tomcat -p 8888:8080 kirinhuang/tomcat
 
 runC:
 	docker attach tomcat
