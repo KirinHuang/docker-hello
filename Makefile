@@ -1,10 +1,10 @@
 build:
-	docker build -t kirinhuang/hello . 
+	docker build -t kirinhuang/ss . 
 
 run:
-	docker run --name hello -it kirinhuang/hello /bin/bash
+	docker run --name ss -it kirinhuang/ss
 
 runC:
-	docker attach hello
+	docker exec -it ss /bin/bash
 cleanC:
-	docker ps -a | awk 'NR>1 {printf "%s ", $$1}' | xargs docker rm 
+	docker ps -a | grep ss | awk '{print, $$1}' | xargs docker rm 
