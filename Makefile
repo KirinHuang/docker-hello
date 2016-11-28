@@ -2,9 +2,9 @@ build:
 	docker build -t kirinhuang/nodejs . 
 
 run:
-	docker run --name nodejs -it kirinhuang/nodejs /bin/bash
+	docker run -d --name nodejs -it kirinhuang/nodejs 
 
 runC:
-	docker attach nodejs
+	docker exec -it nodejs /bin/bash
 cleanC:
-	docker ps -a | awk 'NR>1 {printf "%s ", $$1}' | xargs docker rm 
+	docker ps -a | grep nodejs | awk '{print $$1}' | xargs docker rm 
